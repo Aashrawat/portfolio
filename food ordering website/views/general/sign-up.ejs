@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <h1 class="h3 mb-4 text-center">Sign Up</h1>
+
+        <form method="POST" action="/sign-up">
+          <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" name="firstName" class="form-control" value="<%= values.firstName || '' %>">
+            <% if (errors.firstName) { %>
+              <div class="text-danger mt-1"><%= errors.firstName %></div>
+            <% } %>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" name="lastName" class="form-control" value="<%= values.lastName || '' %>">
+            <% if (errors.lastName) { %>
+              <div class="text-danger mt-1"><%= errors.lastName %></div>
+            <% } %>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" name="email" class="form-control" value="<%= values.email || '' %>">
+            <% if (errors.email) { %>
+              <div class="text-danger mt-1"><%= errors.email %></div>
+            <% } %>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" value="<%= values.password || '' %>">
+            <% if (errors.password) { %>
+              <div class="text-danger mt-1"><%= errors.password %></div>
+            <% } %>
+          </div>
+
+          <button type="submit" class="btn btn-danger w-100">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+<section class="hero mb-5">
+  <div class="hero-content container text-center">
+
+    <h1 class="display-4 hero-title mb-1">DIY HOTPOT</h1>
+
+    <div class="hero-subtitle mb-3">your pot, your way</div>
+
+    <div class="mb-3">
+      <span class="hero-badges">
+        Special Soups: Malatang • Tom Yum • Sukiyaki
+      </span>
+    </div>
+
+    <div class="hero-open h4 mb-1">NOW AVAILABLE</div>
+
+    <div class="mb-2 text-muted">
+      Ready in ~15 minutes
+    </div>
+
+    <div class="hero-open h5 mb-1">OPEN DAILY</div>
+
+    <div class="mb-4 text-muted">
+      11:00 AM - 9:00 PM
+    </div>
+
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="/mealkits" class="btn btn-outline-danger px-4">
+        View Menu
+      </a>
+      <a href="/sign-up" class="btn btn-danger px-4">
+        Join Now
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="mb-5">
+  <div class="container text-center">
+    <h2 class="mb-3">Why Choose DIY Hotpot?</h2>
+    <p class="text-muted mb-4">
+      Fresh ingredients, comforting broths, and a customizable hotpot experience
+      delivered with convenience and style.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-fire fs-1 text-danger mb-3"></i>
+            <h5 class="card-title">Rich Broths</h5>
+            <p class="card-text text-muted">
+              Enjoy bold and flavorful soup bases like Malatang, Tom Yum, and Sukiyaki.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-clock fs-1 text-danger mb-3"></i>
+            <h5 class="card-title">Quick & Easy</h5>
+            <p class="card-text text-muted">
+              Hotpot meals ready in minutes, perfect for busy students and families.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-heart fs-1 text-danger mb-3"></i>
+            <h5 class="card-title">Made Your Way</h5>
+            <p class="card-text text-muted">
+              Pick the broth style you love and enjoy a cozy meal experience at home.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mb-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Special Soups</h2>
+
+    <div class="row g-4">
+      <% featuredMealKits.forEach(meal => { %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <%- include("../partials/mealkit", { meal, user }) %>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

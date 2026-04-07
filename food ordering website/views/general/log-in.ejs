@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <h1 class="h3 mb-4 text-center">Log In</h1>
+
+        <% if (errors.general) { %>
+          <div class="alert alert-danger"><%= errors.general %></div>
+        <% } %>
+
+        <form method="POST" action="/log-in">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" name="email" class="form-control" value="<%= values.email || '' %>">
+            <% if (errors.email) { %>
+              <div class="text-danger mt-1"><%= errors.email %></div>
+            <% } %>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" value="<%= values.password || '' %>">
+            <% if (errors.password) { %>
+              <div class="text-danger mt-1"><%= errors.password %></div>
+            <% } %>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label d-block">Login as</label>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" value="customer" id="customer"
+                <%= !values.role || values.role === "customer" ? "checked" : "" %>>
+              <label class="form-check-label" for="customer">Customer</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" value="clerk" id="clerk"
+                <%= values.role === "clerk" ? "checked" : "" %>>
+              <label class="form-check-label" for="clerk">Data Clerk</label>
+            </div>
+
+            <% if (errors.role) { %>
+              <div class="text-danger mt-1"><%= errors.role %></div>
+            <% } %>
+          </div>
+
+          <button type="submit" class="btn btn-dark w-100">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

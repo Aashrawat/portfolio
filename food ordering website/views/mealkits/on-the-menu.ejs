@@ -1,0 +1,23 @@
+<h1 class="mb-4">On The Menu</h1>
+
+<% categories.forEach(category=> { %>
+
+    <h2 class="mt-4 mb-3">
+        <%= category.categoryName %>
+    </h2>
+
+    <div class="row">
+
+        <% category.mealKits.forEach(meal=> { %>
+
+            <div class="col-md-4 mb-4">
+
+                <%- include("../partials/mealkit", {meal, user}) %>
+
+            </div>
+
+            <% }) %>
+
+    </div>
+
+    <% }) %>

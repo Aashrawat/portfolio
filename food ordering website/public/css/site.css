@@ -1,0 +1,52 @@
+
+.hero {
+  position: relative;
+  min-height: 520px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: url("/images/malatang-1.jpg") center/cover no-repeat;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+
+
+
+.hero-badges {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+
+.hero-open {
+  color: #b30000;
+  font-weight: 800;
+  letter-spacing: 1px;
+}

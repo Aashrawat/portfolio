@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <img src="/images/hotpot logo.jpg" alt="DIY Hotpot Logo"
+           class="rounded-circle me-2"
+           style="width:50px; height:50px; object-fit:cover;">
+      DIY Hotpot
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/mealkits">Mealkits</a>
+        </li>
+
+        <% if (!user) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/sign-up">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/log-in">Log In</a>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= user.role === 'customer' ? '/cart' : '/mealkits/list' %>">
+              <%= user.firstName %>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
