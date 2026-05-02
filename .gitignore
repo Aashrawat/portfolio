@@ -1,65 +1,33 @@
-# ignore files with no extenion
-*
-!*.*
-!*/
+# secrets
+.env
+.env.local
+*.pem
+*.key
 
-# XCode
-## User settings
-xcuserdata/
+# deps
+node_modules/
+.pnpm-store/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-## Xcode 8 and earlier
-*.xcscmblueprint
-*.xccheckout
+# build
+dist/
+build/
+*.tsbuildinfo
 
+# editor / os
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
 
-# Visual Studio
-*.sdf
-*.user
-*.suo
-*.opensdf
+# local data / caches the participant may create
+data/index/
+data/embeddings/
+*.sqlite
 *.db
-Debug/
-ipch/
-x64/
-.vs/
-
-#tempfiles
-~$_*.*
-
-#codelite
-.clang/
-.codelite/
-Debug/
-
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
