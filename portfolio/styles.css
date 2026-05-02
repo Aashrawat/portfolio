@@ -466,6 +466,19 @@ h3 {
   background: var(--paper-soft);
 }
 
+.skill-group span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-group svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  fill: var(--teal);
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
