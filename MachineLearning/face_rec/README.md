@@ -67,4 +67,4 @@ Lower threshold = stricter (fewer false matches).
 
 ## Upgrade later
 
-For higher accuracy (needs Python 3.11/3.12 + TensorFlow), you can switch to **DeepFace** or **InsightFace** later. This project is the simplest path that runs on your current Python.
+For higher accuracy (needs Python 3.11/3.12 + TensorFlow), can switch to **DeepFace** or **InsightFace** later. This project is the simplest path that runs on your current Python.
