@@ -617,7 +617,7 @@ h3 {
 }
 
 .skill-group {
-  min-height: 230px;
+  min-height: auto;
   padding: 22px;
   display: flex;
   flex-direction: column;
